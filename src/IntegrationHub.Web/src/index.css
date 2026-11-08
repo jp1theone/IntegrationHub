@@ -1,0 +1,2 @@
+@import 'tailwindcss';
+html{scroll-behavior:smooth}body{margin:0}#root{min-height:100vh}::selection{background:#bdf1e6;color:#142a3b}
