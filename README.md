@@ -31,7 +31,7 @@ flowchart LR
   Api --> App[Application use cases and contracts]
   App --> Domain[Domain entities and rules]
   Infra[Infrastructure implementations] -.implements.-> App
-  Api -.DI composition root: Program.cs.-> Infra
+  Api -. "DI composition root: Program.cs" .-> Infra
   Infra --> Db[(SQL Server / EF Core)]
   Infra --> ModeRouter[Runtime mode router]
   ModeRouter --> Mock[Deterministic mock provider]

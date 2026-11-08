@@ -10,7 +10,7 @@ flowchart TB
   API --> APP[IntegrationHub.Application<br/>Use cases, DTOs, contracts, validators]
   APP --> DOM[IntegrationHub.Domain<br/>Entities, enums, invariants]
   INF[IntegrationHub.Infrastructure<br/>EF Core, Identity, adapters, workers] -.implements contracts.-> APP
-  API -.composition root: Program.cs / DI.-> INF
+  API -. "composition root: Program.cs / DI" .-> INF
   INF --> SQL[(SQL Server 2019+)]
   INF --> MOCK[Deterministic mock provider]
   INF --> RETRY[ScheduledRetryService]
