@@ -208,4 +208,4 @@ MIT. See [LICENSE](LICENSE).
 
 ## Author
 
-Project author: `<Your Name>` (replace with your preferred public name).
+Project author: Jean Paul CA
