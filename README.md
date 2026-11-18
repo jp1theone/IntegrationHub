@@ -81,15 +81,6 @@ Docker is optional. The application uses a dedicated `IntegrationHub` database o
 From PowerShell:
 
 ```powershell
-git clone https://github.com/<your-account>/IntegrationHub.git
-Set-Location .\IntegrationHub
-dotnet tool restore
-dotnet restore .\IntegrationHub.sln
-```
-
-Set up the API's user-secrets store (values stay in your local .NET secrets store, not in Git):
-
-```powershell
 dotnet user-secrets init --project .\src\IntegrationHub.Api
 dotnet user-secrets set "ConnectionStrings:IntegrationHub" "Server=localhost;Database=IntegrationHub;Integrated Security=True;Encrypt=True;TrustServerCertificate=True" --project .\src\IntegrationHub.Api
 $jwt = [Convert]::ToBase64String([Security.Cryptography.RandomNumberGenerator]::GetBytes(32))
